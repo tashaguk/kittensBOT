@@ -55,9 +55,9 @@ public class RandomImageUploader {
         HttpClient httpClient = HttpClients.createDefault();  //Создание нового экземпляра HttpClient
 
         // Создание массивов с различными ID для 'channel_id' и 'user_id'
-        String[] channelIds = {"3ex6yj6pginmmk1b9rt94gw4fe", "iyxrxcupk3y5dxs3y9gzrj49bo", "i14kpdfrgjbg9jjtytnegnoxeh", "gp6ip5qngpdz3d86jzi9y1u5ec", "u8s6nqjrmpb9fku5oh7gai61ne", "fr8w6fpuhbfy5pbsx9dtsmsa6a", "ur7n68t7cpg3pkbj4i7s8gxwww", "pcsryboejfrpfj31fpuxrgx48y", "r8p97neaa38zz8dajstd39bzro", "ezybkpjbupyotrhruq93sfnjuo", "4n7igrrrctdodjzmh1oeutj3da", "7j1mpngcajgm7x876bjjow74qa", "9xzftak5b7g65d6aoqt91ojnne", "pkxr9upobfnd7rorajhih46yeo", "wc65b5bjnt8zbgy381jyjnf3bw", "bpja7tnuzbnrfda9xamkb3eciy", "iazqpdec7inpujxzf8cjapm5ec"};
+        String[] channelIds = {"3ex6yj6pginmmk1b9rt94gw4fe", "iyxrxcupk3y5dxs3y9gzrj49bo", "i14kpdfrgjbg9jjtytnegnoxeh", "gp6ip5qngpdz3d86jzi9y1u5ec", "u8s6nqjrmpb9fku5oh7gai61ne", "fr8w6fpuhbfy5pbsx9dtsmsa6a", "ur7n68t7cpg3pkbj4i7s8gxwww", "pcsryboejfrpfj31fpuxrgx48y", "r8p97neaa38zz8dajstd39bzro", "ezybkpjbupyotrhruq93sfnjuo", "4n7igrrrctdodjzmh1oeutj3da", "7j1mpngcajgm7x876bjjow74qa", "9xzftak5b7g65d6aoqt91ojnne", "pkxr9upobfnd7rorajhih46yeo", "wc65b5bjnt8zbgy381jyjnf3bw", "bpja7tnuzbnrfda9xamkb3eciy", "iazqpdec7inpujxzf8cjapm5ec", "htcy5a3zabg5fqenkzypibfexa". "iasscamee3dqzf8ofhwymuibzr"};
 
-        String[] userIds = {"5cubkbo9hpbczc6n598ge9nawa", "wnfdd1kbmin47duiezqt6dewke", "kcy7zyz4eb8x3q3nrz7d7aidzh", "cymfc8wge3gozdog3a19xmnc4y", "d784n6k1htdyjd854wwtsn1g8c", "zr97oirpufdeuks113c8qk4kka", "azm6tyjhr3gniykg5rw9s9g4oh", "dy9de1xuiiyf5ynnnsziaj1ddy", "17bqhsn1p7n19eqk38am9cap3y", "fwb3g1x5gjrkjdqqfzkm466qko", "7yxzj1u9xfyqzcb4jnk1dryjxa", "hj637brabin8ppddtuamwjqq6c", "gd9gtxiazjrp3xj89gsw6wu3ky", "znd4dpa3mjryif8kkzyxe9wkxh", "ihz3prkdib8obc7fwc1jntfqcy", "515pxugnhpgzpkhhh6rsk4px3y", "3uuhjs4kiirnznxk84ie8gfsmc"};
+        String[] userIds = {"5cubkbo9hpbczc6n598ge9nawa", "wnfdd1kbmin47duiezqt6dewke", "kcy7zyz4eb8x3q3nrz7d7aidzh", "cymfc8wge3gozdog3a19xmnc4y", "d784n6k1htdyjd854wwtsn1g8c", "zr97oirpufdeuks113c8qk4kka", "azm6tyjhr3gniykg5rw9s9g4oh", "dy9de1xuiiyf5ynnnsziaj1ddy", "17bqhsn1p7n19eqk38am9cap3y", "fwb3g1x5gjrkjdqqfzkm466qko", "7yxzj1u9xfyqzcb4jnk1dryjxa", "hj637brabin8ppddtuamwjqq6c", "gd9gtxiazjrp3xj89gsw6wu3ky", "znd4dpa3mjryif8kkzyxe9wkxh", "ihz3prkdib8obc7fwc1jntfqcy", "515pxugnhpgzpkhhh6rsk4px3y", "3uuhjs4kiirnznxk84ie8gfsmc", "1kprae3xbjgpmb4csr5piuk36r", "5fbgqr3daigipkyp5zwsbujfcc"};
 
         // Отправляем запросы для каждого 'channel_id'
         for (int i = 0; i < channelIds.length; i++) { //
@@ -129,7 +129,7 @@ public class RandomImageUploader {
                     jsonNode.putArray("file_ids").add(picturesId);
 
                     //В JSON объект добавляется строковое поле "message" с заданным текстом и тд
-                    jsonNode.put("message", " 4/6 !:feet: Четверговая пятница! Два денечка всего!:cat-high-five::catjam: ");
+                    jsonNode.put("message", "Солнечного тебе понедельничка! 3 денечка и снова в майские :cutecat:");
                     jsonNode.put("user_id", currentUserId);
                     jsonNode.put("channel_id", currentChannelId);
                     jsonNode.put("create_at", 0);
