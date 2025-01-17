@@ -83,9 +83,11 @@
             var ic = parseInt(document.getElementById("ic").value);
             var fp = parseInt(document.getElementById("fp").value);
             var f = parseInt(document.getElementById("f").value);
+            console.log("IC:", ic, "FP:", fp, "F:", f); // Логируем значения из выпадающих списков
 
             var priority = (ic * 4) + (fp * 3) + (f * 2);
             document.getElementById("result").textContent = priority;
+            console.log("Priority:", priority); // Логируем вычисленное значение приоритета
         }
     </script>
 </body>
