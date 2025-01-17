@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор приоритета</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .input-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 300px; /* фиксированная ширина для контейнера */
+            margin: 10px 0;
+        }
+        label {
+            width: 40%; /* ширина метки */
+            text-align: right; /* выравнивание текста вправо */
+            margin-right: 10px; /* отступ между меткой и выпадающим списком */
+        }
+        select {
+            width: 50%; /* ширина выпадающего списка */
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px; /* добавляем отступы для кнопки */
+            font-size: 16px; /* увеличиваем размер шрифта */
+        }
+        h3 {
+            margin-top: 30px; /* увеличиваем отступ сверху для результата */
+            font-size: 20px; /* увеличиваем размер шрифта для результата */
+        }
+    </style>
+</head>
+<body>
+    <h2>Калькулятор приоритета</h2>
+    
+    <div class="input-container">
+        <label for="ic">IC:</label>
+        <select id="ic">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+    </div>
+
+    <div class="input-container">
+        <label for="fp">FP:</label>
+        <select id="fp">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+    </div>
+
+    <div class="input-container">
+        <label for="f">F:</label>
+        <select id="f">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+    </div>
+
+    <button onclick="calculatePriority()">Рассчитать</button>
+
+    <h3 id="result">Результат: 0</h3>
+
+    <script>
+        function calculatePriority() {
+            var ic = parseInt(document.getElementById('ic').value) || 0;
+            var fp = parseInt(document.getElementById('fp').value) || 0;
+            var f = parseInt(document.getElementById('f').value) || 0;
+
+            // Расчет приоритета
+            var priority = (ic * 4) + (fp * 3) + (f * 2);
+
+            // Вывод результата как целое число
+            document.getElementById('result').innerText = "Результат: " + Math.floor(priority);
+        }
+    </script>
+</body>
+</html>
